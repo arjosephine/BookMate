@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header'; // Import Header
-import AddBook from './pages/AddBook';
 
 const App: React.FC = () => {
   return (
@@ -10,7 +9,7 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/add-book" element={<AddBook />} />
+        {/* Future routes like add-book will go here */}
       </Routes>
     </Router>
   );
