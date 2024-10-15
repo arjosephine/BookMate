@@ -1,4 +1,5 @@
 export interface Book {
+    available: boolean;
     id: string;
     title: string;
     author: string;

@@ -7,7 +7,16 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
   return (
-    <div className="border rounded-lg shadow-lg p-4 bg-white hover:shadow-xl transition-shadow duration-200">
+    <div className="relative border rounded-lg shadow-lg p-4 bg-white hover:shadow-xl transition-shadow duration-200">
+      {/* Availability Dot */}
+      <div className="absolute top-4 right-4">
+        <span
+          className={`inline-block w-4 h-4 rounded-full ${
+            book.available ? 'bg-green-500' : 'bg-red-500'
+          }`}
+          title={book.available ? 'Available' : 'Not Available'}
+        ></span>
+      </div>
       <img
         src={book.imageUrl}
         alt={book.title}
